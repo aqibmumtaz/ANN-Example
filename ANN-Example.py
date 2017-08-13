@@ -44,8 +44,8 @@ l2MatrixW = l1MatrixH
 l2MatrixH = 1
 syn1 = 2*np.random.random((l2MatrixW,l2MatrixH)) - 1
 
-print "======= Neural Network with 1 hidden Layer ======="
-print "\n==== Input Layer nodes ", l1MatrixW, ", Hidden Layer nodes ", l1MatrixH, ", Output Layer nodes ", l2MatrixH, " ====\n"
+print ("======= Neural Network with 1 hidden Layer =======")
+print ("\n==== Input Layer nodes ", l1MatrixW, ", Hidden Layer nodes ", l1MatrixH, ", Output Layer nodes ", l2MatrixH, " ====\n")
 
 
 # This is the main training loop. The output shows the evolution of the error between the model and desired. The error steadily decreases. 
@@ -72,8 +72,8 @@ for j in range(iterations):
     syn1 += l1.T.dot(l2_delta)
     syn0 += l0.T.dot(l1_delta)
     
-print "\nOutput after training ", iterations, " iterations"
-print l2
+print ("\nOutput after training ", iterations, " iterations")
+print (l2)
     
     
 
