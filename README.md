@@ -10,7 +10,7 @@ Install dependencies using [pip](https://pip.pypa.io/en/stable/)
 
 ## Credits
 
-Credits go to [Trask](http://iamtrask.github.io/2015/07/12/basic-python-network/) and [Litery](https://github.com/Litery). I've merely created a wrapper to get people started. 
+Credits go to [Trask](http://iamtrask.github.io/2015/07/12/basic-python-network/). I've merely created a wrapper to get people started. 
 
 ## Python 2/3 Troubleshooting 
 
