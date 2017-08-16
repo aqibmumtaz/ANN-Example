@@ -3,6 +3,11 @@
 import numpy as np
 
 
+
+# Print floats in readable format to print like float: 3.0, or float: 12.6666666666.
+np.set_printoptions(formatter={'float': lambda x: 'float: ' + str(x)})
+
+
 # This code is a definition of the sigmoid function, which is the type of non-linearity chosen for this neural net. It is not the only type of non-linearity that can be chosen, but is has nice analytical features and is easy to teach with.
 
 def nonlin(x, deriv=False):
@@ -34,16 +39,16 @@ np.random.seed(1)
 # Initialization of weights to random numbers. syn0 is weight matrix between input layer and first hidden layer.
 
 # Synapses
-l1Nodes = 2
-l2Nodes = 3
-syn0 = 2*np.random.random((l1Nodes,l2Nodes)) - 1
+l0Nodes = 2
+l1Nodes = 3
+syn0 = 2*np.random.random((l0Nodes,l1Nodes)) - 1
 
 
-l3Nodes = 1
-syn1 = 2*np.random.random((l2Nodes,l3Nodes)) - 1
+l2Nodes = 1
+syn1 = 2*np.random.random((l1Nodes,l2Nodes)) - 1
 
-print("======= Neural Network with 1 hidden Layer =======")
-print("\n==== Input Layer nodes ", l1Nodes, ", Hidden Layer nodes ", l2Nodes, ", Output Layer nodes ", l3Nodes, " ====\n")
+print("\n======= Neural Network with (with one hidden layers) =======")
+print("==== Network Topology ", l0Nodes, " x ", l1Nodes, " x ", l2Nodes, " ====\n")
 
 
 # This is iteration training loop for network training. error decreases on each cycle of training by the slop of sigmoid function using gradient descent and back propagation.
